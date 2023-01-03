@@ -3,15 +3,17 @@ ALGORITHM Checkpoint
 VAR
 
    nbv,nbw,nbc:= INTEGER ;
-   sentc:= STRING[] ;
+   sentc:= STRING ;
 
 BEGIN
 
   nbc:= 0 ;
 
-  nbw:= 1 ;
+  nbw:= 0 ;
 
   nbv:= 0;
+
+  sentc:= "";
 
   write("type the sentence")
 
@@ -19,13 +21,13 @@ BEGIN
 
 REPEAT
 
-   IF (sentc[nbc]=" ") THEN
+   IF (sentc=" ") THEN
 
        nbw:=nbw+1 ;
 
    END_IF
 
-  IF (sentc[nbc] in ["a","e","u","i","o","y"]) THEN
+  IF (sentc in ["a","e","u","i","o","y"]) THEN
 
    nbv:= nbv +1 ;
 
@@ -33,11 +35,11 @@ REPEAT
 
    nbc := nbc+1 ;
 
-UNTIL (sentc[nbc]=".")
+UNTIL (sentc =".")
 
-   write( "le nombre de caractere est ",nbc+1 )
+   write( "le nombre de caractere est ",nbc )
 
-   write (" le nombre de mot est ",nbw)
+   write (" le nombre de mot est ",nbw+1)
 
    write (" le nombre de voyelle est ",nbv)
 

@@ -1,0 +1,60 @@
+/* ALGORITHM Test
+VAR
+    x,y,z,a : INTEGER;
+    
+BEGIN
+
+    a := 0;
+    a := x;
+    x := z;
+    y := x;
+    z := a; 
+
+    write("x: ",x);
+    write("y: ",y);
+    write("z: ",z);
+
+END
+*/
+
+ALGORITHM Date
+VAR
+    day,month,year,y: INTEGER;
+
+BEGIN
+    write("enter date: ");
+    read(y);
+
+    FOR i FROM 1 TO y STEP 1  DO
+        IF (i < 2) THEN
+            day := y;
+        END_IF
+        IF (i<2 && i>4) THEN
+            month := y;
+        END_IF
+        IF (i<4 && i>6) THEN
+            year := y;
+        END_IF
+    END_FOR
+
+    IF (month < 1 || month > 12) THEN
+        write("invalid");
+    END_IF
+    IF (day<1 || day > 31) THEN
+        write("invalid");
+    END_IF
+    IF (month = 2) THEN
+       IF ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)) THEN
+            write("day:",day <= 29);
+       ELSE
+        write("day:", day<=28);
+       END_IF
+    END_IF
+    IF (month = 4 || month = 6 || month = 9 || month = 11 ) THEN
+        write("day:" , day<=30);
+    END_IF
+    
+END
+
+
+
