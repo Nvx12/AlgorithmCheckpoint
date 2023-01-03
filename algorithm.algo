@@ -3,7 +3,7 @@ ALGORITHM Checkpoint
 VAR
 
    nbv,nbw,nbc:= INTEGER ;
-   sentc:= STRING ;
+   sentc:= CHAR;
 
 BEGIN
 
