@@ -37,11 +37,11 @@ REPEAT
 
 UNTIL (sentc =".")
 
-   write( "le nombre de caractere est ",nbc )
+   write( "le nombre de caractere est ",nbc );
 
-   write (" le nombre de mot est ",nbw+1)
+   write (" le nombre de mot est ",nbw+1);
 
-   write (" le nombre de voyelle est ",nbv)
+   write (" le nombre de voyelle est ",nbv);
 
 END
 
